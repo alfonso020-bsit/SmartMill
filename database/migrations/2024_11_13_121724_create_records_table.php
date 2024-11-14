@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('CUSTOMER_NAME');
             $table->string('PRODUCT_NAME');
             $table->string('VARIETY')->nullable();
-            $table->string('TRANSACTION_TYPE', ['Service', 'Inventory']);
+            $table->enum('TRANSACTION_TYPE', ['Service', 'Inventory']); 
             $table->integer('QUANTITY');
             $table->decimal('PRICE', 8, 2);
             $table->decimal('TOTAL_PRICE', 10, 2);
